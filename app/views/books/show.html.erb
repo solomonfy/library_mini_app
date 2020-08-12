@@ -1,0 +1,19 @@
+<h2> Book details </h2>
+
+Title: <%=  @book.title %><br>
+Author: <%=  @book.author %><br>
+Members checked out this book: 
+    <ul>
+        <% @book.users.each do |user| %>
+          <li><%= link_to user.name, user_path(user) %></li>
+        <% end %>
+    </ul>
+
+<br><br>
+<%= button_to 'Back', books_path, method: :get %>
+<br><br>
+<%= button_to 'Edit book', edit_book_path(@book), method: :get %>
+<br><br>
+<%= button_to 'Add to checkout', new_checkout_path(@book.checkouts), method: :get %>
+<br><br>
+<%= button_to 'Delete book', book_path(@book), method: :delete %>

@@ -1,0 +1,9 @@
+<h1> All members list </h1>
+
+<ul>
+    <% @users.each do |user| %>
+        <li><%= link_to user.name, user_path(user) %></li>
+    <% end %>
+</ul>
+
+<%= button_to 'Add new member', new_user_path, method: :get %>

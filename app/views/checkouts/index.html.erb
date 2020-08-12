@@ -1,0 +1,7 @@
+<h2> All checkouts </h2>
+
+<ul>
+    <% @checkouts.each do |c| %>
+        <li><%= link_to c.user.name, checkout_path(c) %></li>
+    <% end %>
+</ul>
