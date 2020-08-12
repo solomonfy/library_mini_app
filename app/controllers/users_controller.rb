@@ -4,13 +4,14 @@ class UsersController < ApplicationController
 
 
     def about
-        
+        @users = User.count
+        @books = Book.count
     end
 
     def home
         
     end
-    
+
     def index
         @users = User.all
     end

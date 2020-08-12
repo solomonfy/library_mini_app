@@ -19,7 +19,7 @@ Address: <%= @user.address%> </strong> <br><br>
 <br>
 <%= button_to 'Back', users_path, method: :get %>
 <br>
-<%= button_to 'Delete user', user_path(@user), method: :delete %>
+<%= button_to 'Delete user', user_path(@user), method: :delete, data: {confirm: 'እርግጠኛ ነህ?' } %>
 <br>
 <%= button_to 'Add ckeckout', new_checkout_path, method: :get %>
 

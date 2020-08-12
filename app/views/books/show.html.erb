@@ -16,4 +16,4 @@ Members checked out this book:
 <br><br>
 <%= button_to 'Add to checkout', new_checkout_path(@book.checkouts), method: :get %>
 <br><br>
-<%= button_to 'Delete book', book_path(@book), method: :delete %>
+<%= button_to 'Delete book', book_path(@book), method: :delete, data: {confirm: 'እርግጠኛ ነህ?' } %>
